@@ -6,6 +6,10 @@ src: url(./Open_Sans/OpenSans-Regular.ttf);
 font-family: raleway;
 src: url(./Raleway/Raleway-Bold.ttf);
 }
+@font-face {
+font-family: raleway1;
+src: url(./Raleway/Raleway-ThinItalic.ttf);
+}
 body{
 	margin: 0;
 	padding: 0;
@@ -13,29 +17,28 @@ body{
 	background-color: hsl(218, 28%, 13%);
 	font-family: openSans, arial;
 }
-}
-.nav-bar{
-	width: 100vw;
-	height: 100vh;
+.nav-bar, .top{
+	width: 100%;
+	/*height: 100vh;*/
 }
 .nav-items{
-	width: 80%;
+	width: 94%;
 	background-color: hsl(217, 28%, 15%);
 	margin: auto;
-	padding: 35px 10%;
+	/*padding: 0px 3%;*/
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 .logo{
-	width: 120px;
+	width: 80px;
 	cursor: pointer;
 }
 .nav-items ul li{
 	list-style: none;
 	display: inline-block;
-	font-family: raleway, arial;
-	margin: 0 20px;
+	font-family: raleway1, arial;
+	margin: 0 auto;
 	position: relative;
 }
 .nav-items ul li a{
@@ -47,21 +50,97 @@ body{
 	content: '';
 	height: 3px;
 	width: 0;
-	background: #009688;
+	background: #fff;
 	position: absolute;
 	left: 0;
-	bottom: -10px;
+	bottom: -1px;
 	transition: 0.5s;
 }
 .nav-items ul li:hover::after{
 	width: 100%;
+	color: #fff;
+	background: #fff;
+	font-family: raleway, arial;
 	/*transition: 0.5s;*/
 }
-h1,h2, button, h5{
+h1,h2,h3, button, h5{
 	font-family: raleway, arial;
 }
+.main-img{
+	width: 70vw;
+}
+.main-img1{
+	width: 70vw;
+}
+.top button{
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 2px solid hsl(176, 68%, 64%);
+	background: hsl(176, 68%, 64%);
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.top button span{
+	background: transparent;
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+.top button:hover span{
+	width: 100%;
+}
+.top button:hover{
+	border: none;
+}
+.backstart{
+	background: hsl(217, 28%, 15%);
+	background-image: url("./images/bg-curvy-desktop.svg");
+	background-position: 0px 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-bottom: 90px;
+	position: relative;
+}
+#main{
+	width: 80%;
+	position: absolute;
+	top: 230px;
+	left: 10%;
+}
+#main h1{
+	font-size: 20px;
+}
+#main p, #productive p{
+	font-size: 14px;
+}
+.services{
+	width: 100vw;
+	padding-top: 100px;
+	margin: 100px auto 100px auto;
+	justify-content: space-between;
+}
+.services div{
+	width: 85vw;
+	margin: 100px auto;
+}
+.services p{
+	font-size: 14px;
+}
 #productive{
-	margin: auto 50px;
+	/*width: 90vw;*/
+	margin: 0px auto;
 }
 #productive a span{
 	background-image: url("./images/icon-arrow.svg");
@@ -72,7 +151,7 @@ h1,h2, button, h5{
 	content: '';
 	height: 3px;
 	width: 0;
-	background: #fff;
+	background: hsl(176, 68%, 64%);
 	position: absolute;
 	left: 0;
 	bottom: -10px;
@@ -81,19 +160,171 @@ h1,h2, button, h5{
 #productive a{
 	text-decoration: none;
 	position: relative;
-	color: hsl(0, 0%, 100%);
+	color: hsl(176, 68%, 64%);
+}
+#productive a:hover{
+	color: #fff;
+}
+#productive a span:hover{
+	background-color: #fff;
 }
 #productive a:hover::after{
-	/*text-decoration: underline;*/
 	width: 100%;
+	background: #fff;
+}
+.b-top{
+	width: 90vw;
+	margin: auto;
+}
+.b-bottom{
+	position: relative;
+}
+.b-middle{	
+	background-image: url("./images/bg-quotes.png");
+	background-repeat: no-repeat;
+	background-position:65px 30px;
+	background-size: 30px 25px;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.b-middle>div{
+	width: 60vw;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 10px;
+	background: hsl(219, 30%, 18%);
+	box-shadow: 1px 1px 5px hsl(219, 30%, 18%);
+}
+.b-middle>div p{
+	margin-top: 0px;
+	font-size: 9px;
+}
+.profile{
+	display: flex;
+	/*padding: 0;*/
+}
+.profile>div{
+	height: 30px;
+	margin: 0px;
+}
+.profile img{
+	width: 30px;
+	display: block;
+	margin: auto;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+.profile span{
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 7px;
+}
+.profile h6{
+	margin-top: 10px;
+	line-height: 0px;
+	margin-bottom: 0px;
+}
+.card-container{
+	width: 100vw;
+	overflow: hidden;
+	/*display: inline-block;*/
+}
+.upper-container{
+	height: 200px;
+}
+.mail-container{
+	box-shadow: 2px 5px 5px hsl(216, 53%, 9%);
+	background: hsl(217, 28%, 15%);
+	text-align: center;
+	width: 60vw;
+	border-radius: 20px;
+	padding: 20px 10vw;
+	transform: translate(10vw,0px);
+}
+.mail-container img{
+	width: 5vw;
+	height: 5vw;
+	border-radius: 50%;
+}
+.mail-container p{
+	font-size: 11px;
+}
+.lower-container{
+	background: hsl(216, 53%, 9%);
+	padding: 300px 0vw 100px 0vw;
+}
+form{
+	text-align: left;
+}
+label{
+	color: hsl(0, 100%, 63%);
+	margin: 0px;
+	display: none;
+	margin-left: 10px;
+	font-size: 13px;
+}
+input[type=email]{
+	width: 40vw;
+	padding: 10px 40px;
+	margin: 20px 0px 0px 0px;
+	border-radius: 25px;
+	text-align: left;
+	border: 0px;
+	position: relative;
+	overflow: hidden;
+}
+input[type=email]:focus{
+	border: 0px;
+	text-align: left;
+}
+form button{
+	width: 200px;
+	/*padding: 10px 0;*/
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 2px solid hsl(176, 68%, 64%);
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+button[type=submit] span{
+	background: hsl(176, 68%, 64%);
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button[type=submit]:hover span{
+	width: 100%;
+}
+button[type=submit]:hover{
+	border: none;
+}
+.stats{
+	width: 80vw;
+	margin: auto;
+	/*padding: 10vw;*/
+}
+.new-logo{
+	width: 80vw;
+	margin: auto;
 }
 .stats img{
 	display: inline-block;
 	margin-right: 10px;
 }
 .location{
-	width: 20vw;
-	/*height: 20vw;*/
+	width: 85vw;
 	display: flex;
 	margin-bottom: 0px;
 }
@@ -103,6 +334,9 @@ h1,h2, button, h5{
 .stats li{
 	list-style: none;
 	margin-bottom: 20px;
+}
+.stats li:hover{
+	font-weight: bolder;
 }
 #icons{
 	padding-top: 20px;
@@ -117,23 +351,51 @@ i{
 
 
 @media screen and (min-width: 376px) {
+	.nav-items{
+		padding: 20px 3%;
+	}
+	.logo{
+	width: 120px;
+	}
+	.nav-items ul li{
+		margin: 0px 20px;
+	}
+	.main-img{
+		margin-top: 50px;
+		width: 50vw;
+	}
+	#main{
+		width: 50%;
+		position: absolute;
+		top: 600px;
+		left: 25%;
+	}
+	#main h1{
+		font-size: 2.3rem;
+		line-height: 47px;
+	}
+	#main p{
+		font-size: 1.4rem;
+	}
 	.backstart{
 	background: hsl(217, 28%, 15%);
 	background-image: url("./images/bg-curvy-desktop.svg");
-	background-position: 0px 550px;
-	padding-bottom: 150px;
+	background-position: 0px 680px;
+	background-size: contain;
+	padding-bottom: 520px;
 	background-repeat: no-repeat;
 	}
 	.services{
 	display: flex;
 	flex-wrap: wrap;
 	width: 60vw;
-	padding: 100px 0px;
-	margin: auto;
+	padding: 0px;
+	margin: 0px auto;
 	justify-content: space-between;
 	}
 	.services div{
 	width: 25vw;
+	margin: 0px auto 100px auto;
 	}
 	.top button{
 	width: 200px;
@@ -144,14 +406,14 @@ i{
 	font-weight: bold;
 	text-transform: uppercase;
 	border: 2px solid hsl(176, 68%, 64%);
-	background: transparent;
+	background: hsl(176, 68%, 64%);
 	color: #fff;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	}
 	.top button span{
-	background: hsl(176, 68%, 64%);
+	background: transparent;
 	height: 100%;
 	width: 0;
 	border-radius: 25px;
@@ -170,10 +432,22 @@ i{
 	}
 	.b-top{
 	display: flex;
+	justify-content: space-between;
 	width: 90vw;
 	margin: auto;
 	}
-
+	.main-img1{
+		width: 40vw;
+	}
+	#productive{
+		width: 42vw;
+	}
+	#productive h3{
+		font-size: 3rem;
+	}
+	#productive p{
+		font-size: 1rem;
+	}
 	.b-bottom{
 	position: relative;
 	}
@@ -183,7 +457,8 @@ i{
 	margin: auto;
 	background-image: url("./images/bg-quotes.png");
 	background-repeat: no-repeat;
-	background-position:20px 0px;
+	background-position:42px 19px;
+	background-size: 45px 40px;
 	padding: 30px;
 	margin-top: 200px;
 	justify-content: space-between;
@@ -197,6 +472,7 @@ i{
 	}
 	.b-middle>div p{
 	margin-top: 0px;
+	font-size: .8rem;
 	}
 	.profile{
 	display: flex;
@@ -264,12 +540,6 @@ i{
 	text-align: left;
 	padding: 0px 10px;
 	}
-	label{
-	color: hsl(0, 100%, 63%);
-	margin: 0px;
-	margin-left: 40px;
-	font-size: 13px;
-	}
 	input[type=email]{
 	width: 25vw;
 	padding: 15px 40px;
@@ -291,14 +561,14 @@ i{
 	font-weight: bold;
 	text-transform: uppercase;
 	border: 2px solid hsl(176, 68%, 64%);
-	background: transparent;
+	background: hsl(176, 68%, 64%);
 	color: #fff;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 	}
 	button[type=submit] span{
-	background: hsl(176, 68%, 64%);
+	background: transparent;
 	height: 100%;
 	width: 0;
 	border-radius: 25px;
@@ -315,309 +585,51 @@ i{
 	border: none;
 	}
 	.stats{
+	width: 90vw;
+	/*background-color: red;*/
 	display: flex;
 	justify-content: space-between;
 	}
-}
-
-
-@media screen and (max-width: 375px){
-	.nav-bar{
-	width: 100vw;
-	height: 150px;
-	background-color: hsl(217, 28%, 15%);
-}
-.nav-items{
-	width: 90%;
-	background-color: hsl(217, 28%, 15%);
-	margin: auto;
-	padding: 25px 5%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.logo{
-	width: 80px;
-	cursor: pointer;
-}
-.nav-items ul li{
-	list-style: none;
-	display: inline-block;
-	font-family: raleway, arial;
-	margin: 0 0px;
-	position: relative;
-}
-.nav-items ul li a{
-	text-decoration: none;
-	color: #fff;
-	text-transform: capitalize;
-}
-.nav-items ul li::after{
-	content: '';
-	height: 3px;
-	width: 0;
-	background: #009688;
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	transition: 0.5s;
-}
-.nav-items ul li:hover::after{
-	width: 100%;
-	/*transition: 0.5s;*/
-}
-h1,h2, button, h5{
-	font-family: raleway, arial;
-}
-.main-img{
-	width: 80vw;
-}
-#productive{
-	margin: auto;
-}
-#productive a span{
-	background-image: url("./images/icon-arrow.svg");
-	background-position: center;
-	background-size: cover;
-}
-#productive a::after{
-	content: '';
-	height: 3px;
-	width: 0;
-	background: #fff;
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	transition: 0.5s;
-}
-#productive a{
-	text-decoration: none;
-	position: relative;
-	color: hsl(0, 0%, 100%);
-}
-#productive a:hover::after{
-	/*text-decoration: underline;*/
-	width: 100%;
-}
-.stats{
+	.new-logo{
 	width: 80vw;
 	margin: auto;
-	/*padding: 10vw;*/
-}
-.new-logo{
-	width: 80vw;
-	margin: auto;
-}
-.stats img{
+	}
+	.stats img{
 	display: inline-block;
 	margin-right: 10px;
-}
-.location{
-	width: 80vw;
-	/*height: 20vw;*/
+	}
+	.location{
+		width: 21vw;
 	display: flex;
 	margin-bottom: 0px;
-}
-.location div{
+	}
+	.col{
+		text-align: center;
+	}
+	.location p{
+		font-size: 1rem;
+	}
+	.location div{
 	margin-top: 20px;
-}
-.stats li{
+	}
+	.stats li{
 	list-style: none;
+	cursor: pointer;
+	text-align: left;
 	margin-bottom: 20px;
-}
-.stats ul{
-	list-style: none;
-	padding: 0px;
-	margin-top: 40px;
-}
-#icons{
+	}
+	.stats li:hover{
+	font-weight: bolder;
+	}
+	#icons{
 	padding-top: 20px;
-	width: 50vw;
-	margin: auto;
-}
-i{
+	}
+	i{
 	margin-right: 10px;
 	padding: 5px;
 	border: 2px solid #fff;
 	border-radius: 50%;
-}
-	.backstart{
-	background: hsl(217, 28%, 15%);
-	background-image: url("./images/bg-curvy-desktop.svg");
-	background-position: 0px 300px;
-	background-size: 400px 80vw;
-	background-repeat: no-repeat;
-	}
-	.services{
-	width: 100vw;
-	padding: 100px 0px;
-	margin: auto;
-	justify-content: space-between;
-	}
-	.services div{
-	width: 80vw;
-	margin: 100px auto;
-	}
-	.top button{
-	width: 200px;
-	padding: 15px 0;
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	text-transform: uppercase;
-	border: 2px solid hsl(176, 68%, 64%);
-	background: transparent;
-	color: #fff;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-	}
-	.top button span{
-	background: hsl(176, 68%, 64%);
-	height: 100%;
-	width: 0;
-	border-radius: 25px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	z-index: -1;
-	transition: 0.5s;
-	}
-
-	.top button:hover span{
-	width: 100%;
-	}
-	.top button:hover{
-	border: none;
-	}
-	.b-top{
-	width: 90vw;
-	margin: auto;
-	}
-
-	.b-bottom{
-	position: relative;
-	}
-	.b-middle{
-	background-image: url("./images/bg-quotes.png");
-	background-repeat: no-repeat;
-	background-position:50px 80px;
-	padding: 30px;
-	margin-top: 150px;
-	}
-	.b-middle>div{
-	width: 60vw;
-	margin: 80px auto;
-	padding: 20px;
-	border-radius: 10px;
-	background: hsl(219, 30%, 18%);
-	box-shadow: 1px 1px 5px hsl(219, 30%, 18%);
-	}
-	.b-middle>div p{
-	margin-top: 0px;
-	}
-	.profile{
-	display: flex;
-	/*padding: 0;*/
-	}
-	.profile>div{
-	height: 30px;
-	margin: 0px;
-	}
-	.profile img{
-	width: 30px;
-	display: block;
-	margin: auto;
-	margin-right: 10px;
-	border-radius: 50%;
-	}
-	.profile span{
-	margin-top: 0px;
-	padding-top: 0px;
-	font-size: 10px;
-	}
-	.profile h5{
-	margin-top: 0px;
-	margin-bottom: 0px;
-	}
-	.card-container{
-	width: 100vw;
-	overflow: hidden;
-	/*display: inline-block;*/
-	}
-	.upper-container{
-	height: 200px;
-	}
-	.mail-container{
-	box-shadow: 2px 5px 5px hsl(216, 53%, 9%);
-	background: hsl(217, 28%, 15%);
-	text-align: center;
-	width: 60vw;
-	border-radius: 20px;
-	padding: 20px 10vw;
-	transform: translate(10vw,0px);
-	}
-	.mail-container img{
-	width: 5vw;
-	height: 5vw;
-	border-radius: 50%;
-	}
-	.lower-container{
-	background: hsl(216, 53%, 9%);
-	padding: 300px 0vw 100px 0vw;
-	}
-	form{
-	text-align: left;
-	}
-	label{
-	color: hsl(0, 100%, 63%);
-	margin: 0px;
-	margin-left: 10px;
-	font-size: 13px;
-	}
-	input[type=email]{
-	width: 40vw;
-	padding: 10px 40px;
-	margin: 20px 0px 0px 0px;
-	border-radius: 25px;
-	border: 0px;
-	position: relative;
-	overflow: hidden;
-	}
-	input[type=email]:focus{
-	border: 0px;
-	}
-	form button{
-	width: 200px;
-	/*padding: 10px 0;*/
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	text-transform: uppercase;
-	border: 2px solid hsl(176, 68%, 64%);
-	background: transparent;
-	color: #fff;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-	}
-	button[type=submit] span{
-	background: hsl(176, 68%, 64%);
-	height: 100%;
-	width: 0;
-	border-radius: 25px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	z-index: -1;
-	transition: 0.5s;
-	}
-	button[type=submit]:hover span{
-	width: 100%;
-	}
-	button[type=submit]:hover{
-	border: none;
 	}
 }
+
+
